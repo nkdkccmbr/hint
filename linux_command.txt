@@ -1,0 +1,76 @@
+GitHub系
+
+git init .gitフォルダの作成
+.gitignoreに管理したくないものを入れる
+git config user.email [address] アドレス登録
+git config user.name [name] ユーザー名登録
+git config --list 確認
+git config --unset [削除項目] 削除
+
+git status 状況の確認
+git diff 差分の確認
+git add [target] 管理対象に追加
+git add --all 全部追加
+git commit -m "prefix:comment" コミット
+    feat: 新しい特徴の追加
+    fix: バグの修正
+    docs: ドキュメントの更新
+    style: プログラムスタイルの変更
+    refactor: リファクタリング
+    perf: パフォーマンスの改善
+    test: テストの変更
+    chore: ライブラリやビルド環境の変更
+
+git log ログの確認
+git remote add [name] [url] 共有リポジトリ登録
+git push [name] [branch] プッシュ
+
+[command] > [file]
+実行結果を上書き保存
+
+[command] >> [file]
+実行結果を追記保存
+
+[command] >& [file]
+実行結果とエラーを上書き保存
+
+[command] 2> [file]
+エラーを上書き保存
+
+[command] 2>> [file]
+エラーを追記保存
+
+ls [option]
+リスト表示
+-l ファイル情報の表示
+-a 隠しファイルも表示
+-lh 容量表示
+-lhs 容量順に表示
+
+less [option] [file]
+一画面ずつ表示
+大容量ファイルとか
+-N 行番号
+
+head [option] [file]
+ファイルを頭から抜き出す
+-n 行数
+-c バイト
+
+tail [option] [file]
+ファイルを末尾から抜き出す
+-n 行数
+-c バイト
+
+wc [option] [file]
+ファイル内の行数，単語数，バイト数を集計し表示．
+-c バイト数のみを集計し表示
+-w 単語数のみを集計し表示
+-l 行数のみを集計し表示
+
+nohup [command] > out.log 2> error.log &
+ログアウトしても処理を続ける
+標準出力をout.logに
+エラーをerror.logに
+pythonの場合はpython -u で実行しないとログをはかない．
+バッファにたまってしまうため．
